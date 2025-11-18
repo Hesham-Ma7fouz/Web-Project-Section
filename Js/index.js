@@ -48,6 +48,7 @@ var menu=[
 ]
 
 var orderList=[]
+var total=0
 if(localStorage.getItem("order")!==null){
     orderList=JSON.parse( localStorage.getItem("order") )
     displayOrder()
@@ -77,6 +78,7 @@ function addorder(index){
 
 function displayOrder(){
     box=``
+    box2=``
     for(var i=0; i<orderList.length; i++){
         box+=`
             <tr>
@@ -87,9 +89,19 @@ function displayOrder(){
             </tr>
             `
     }
+    box2=`
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="fw-bold">total= ${total}</td>
+            <td></td>
+        </tr>
+        `
     
     document.getElementById("m-body").innerHTML=box
+    document.getElementById("m-foot").innerHTML=box2
     localStorage.setItem("order",JSON.stringify(orderList))
+    
     confirmbtn.classList.replace("d-none","d-block")
 }
 
@@ -107,6 +119,7 @@ function confirmOrder(){
 function confirmOrderInfo(){
     card.classList.replace("d-block","d-none")
 }
+
 
 
 
