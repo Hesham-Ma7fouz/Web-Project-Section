@@ -78,8 +78,8 @@ function displayOrder(){
         box+=`
             <tr>
                 <td>${i+1}</td>
-                <td> ${menu[i].name} </td>
-                <td> ${menu[i].price} </td>
+                <td> ${orderList[i].name} </td>
+                <td> ${orderList[i].price} </td>
                 <td><button class="btn btn-danger" onclick="deleteOrder(${i})" ><i class="fa-solid fa-trash" ></i> Delete </button></td>
             </tr>
             `
@@ -104,4 +104,5 @@ function confirmOrder(){
 function confirmOrderInfo(){
     card.classList.replace("d-block","d-none")
 }
+
 
