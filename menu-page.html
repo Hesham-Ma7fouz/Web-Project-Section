@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menu </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div class="container0">
+            <div class="nav-bar-logo">
+                <h1><a href="#"> Fit&Fresh </a></h1>
+            </div>
+            <div class="nav-bar-item">
+                <ul >
+                    <li> <a href="./index.html"> Home </a></li>
+                    <li> <a href="./about-page.html"> About </a></li>
+                    <li> <a href="./menu-page.html"> Menu </a></li>
+                    <li> <a href="./contact-page.html"> Contact </a></li>
+                </ul>
+            </div>
+            <div class="nav-bar-icon">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="menu" id="menu-section">
+            <div class="container3">
+                <div class="heading">
+                    <h2> MENU </h2>
+                    <p>
+                        Our 
+                    <span> Popular </span>
+                        Menu Items
+                    </p>
+                </div>
+                <div class="menu-cards" id="my-menu">
+                </div>
+    </section>
+    <section class="order" id="order-section">
+        <div class="container3">
+            <div class="heading">
+                    <h2> YOUR ORDER </h2>
+                    <p>
+                        
+                    <span> Review & </span>
+                        confirmation
+                    </p>
+            </div>
+            <div class="order-content">
+            <table class="table text-center mt-3">
+                <thead>
+                    <tr>
+                    <th scope="col">NO.</th>
+                    <th scope="col">Item Nmae</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="m-body">
+                </tbody>
+            </table>
+            <button id="confirmbtn" class=" btn btn-success text-white d-none  m-auto my-4 px-4 " onclick="confirmOrder()"> confirmation</button>
+
+            <div class="card d-none" id="card" >
+                <form>
+                    <label for="siteName" class="mb-2"></label>
+                    <input  type="text" class="form-control mb-3" id="siteName" placeholder="Enter Your Name">
+                    <input  type="text" class="form-control mb-3" id="siteName" placeholder="Enter Your Address">
+                    <input  type="tel" class="form-control mb-3" id="siteName" placeholder="Enter Your Phone Number">
+                    
+                    <button id="confirmbtncard" class=" btn btn-success text-white d-block   m-auto my-4 px-4 " onclick="confirmOrderInfo()"> confirmation</button>
+                </form> 
+            </div>
+        </div>
+    </section>
+
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+    <script src="./Js/index.js"></script>
+</body>
+</html>

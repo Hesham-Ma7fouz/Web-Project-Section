@@ -1,0 +1,54 @@
+
+
+@media screen and (max-width:575px){
+    .header{
+        padding: 100px 0 50px ;
+
+        /* margin: auto;
+        background-color: red; */
+    }
+    .header .container1{
+        /* background-color: blue; */
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-flow: column wrap;
+        
+    }
+    .header .container1 .header-heading{
+    width: 100%;
+    text-align: center;
+    /* order: 1; */
+    /* background-color: lightslategray; */
+}
+.header-buttons{
+    width: 70%;
+    margin: auto;
+    justify-content: space-evenly;
+    column-gap: 0;
+}
+.header-image{
+    width: 100%;
+    order: -1;
+}
+.header-image img{
+    width: 100%;
+}
+
+.chefs .container2{
+    width: 100%;
+    margin: auto;
+}
+.container2 .chefs-cards {
+    width: 100%;
+    flex-wrap: wrap;
+}
+.chef-card{
+    width: 100%;
+}
+.chef-card img{
+    width: 100%;
+}
+
+    
+}
