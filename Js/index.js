@@ -48,12 +48,9 @@ var menu=[
 ]
 
 var orderList=[]
-var total=0
-if(localStorage.getItem("order")!==null){
-    orderList=JSON.parse( localStorage.getItem("order") )
-    displayOrder()
-}
+
 var menucontent=``
+var total=0
 
 for(var i=0;i<menu.length;i++){
     menucontent+=`
@@ -118,7 +115,9 @@ function confirmOrder(){
 }
 function confirmOrderInfo(){
     card.classList.replace("d-block","d-none")
+    window.alert("your order is confirmed")
 }
+
 
 
 
