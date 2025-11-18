@@ -48,7 +48,10 @@ var menu=[
 ]
 
 var orderList=[]
-
+if(localStorage.getItem("order")!==null){
+    orderList=JSON.parse( localStorage.getItem("order") )
+    displayOrder()
+}
 var menucontent=``
 
 for(var i=0;i<menu.length;i++){
@@ -86,14 +89,14 @@ function displayOrder(){
     }
     
     document.getElementById("m-body").innerHTML=box
-
+    localStorage.setItem("order",JSON.stringify(orderList))
     confirmbtn.classList.replace("d-none","d-block")
 }
 
 function deleteOrder(index){
     orderList.splice(index,1)
     displayOrder()
-
+    localStorage.setItem("order",JSON.stringify(orderList))
     if( orderList.length==0){
         confirmbtn.classList.replace("d-block","d-none")
     } 
@@ -104,5 +107,6 @@ function confirmOrder(){
 function confirmOrderInfo(){
     card.classList.replace("d-block","d-none")
 }
+
 
 
